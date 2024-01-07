@@ -35,7 +35,9 @@ normative:
 informative:
   I-D.draft-ietf-ace-key-groupcomm: ACE-KEY-GROUPCOMM
   I-D.draft-ietf-oauth-sd-jwt-vc: SD-JWT-VC
-  BoundedContexts: https://martinfowler.com/bliki/BoundedContext.html
+  BoundedContexts:
+    title: Bounded Context
+    target: https://martinfowler.com/bliki/BoundedContext.html
   RFC8949: CBOR
   RFC8259: JSON
   RFC9518:
@@ -234,11 +236,11 @@ In OpenID Connect, we see URLs, but we also see URNs; we see `application/json`,
 
 In DIDs and VCs, we see URLs, but we also see DIDs (URNs); we see `application/json`, but we also see `application/ld+json` nested inside of it, even further, we see `application/n-quads` constraining what `application/json` can express through the use of `application/ld+json`. We see URLs contraining what DIDs can express, through reuse of the path, query and fragment. We see a desire to wrap easily understood content types such as `application/jwk+json` or `application/jwt` in less easy to understand JSON-LD content types. Where does this nesting come from?
 
-{{-RFC9518}} explains in Section 4.7: "standards efforts should focus on providing concrete utility to the majority of their users as published, rather than being a "framework" where interoperability is not immediately available. Internet functions should not make every aspect of their operation extensible; boundaries between modules should be designed in a way that allows evolution, while still offering meaningful functionality."
+{{RFC9518}} explains in Section 4.7: "standards efforts should focus on providing concrete utility to the majority of their users as published, rather than being a "framework" where interoperability is not immediately available. Internet functions should not make every aspect of their operation extensible; boundaries between modules should be designed in a way that allows evolution, while still offering meaningful functionality."
 
 In order to enable consumers leverage their prefered identifiers and content types, some specifications take a "big tent" approach, created an open ended extensibility mechansism, and then providing a single mandatory to implement instantiation of it. In the worst cases, {{DIDsFO}}, standards insist on providing the estensiblity mechanisms, and refuse to provide mandatory to implement instances, and through doing so, ensure no interoperability is achievable without a second document, enabling a profile that is actually usable. It could be argued that OAuth has similar deficiencies, and that OpenID Connect solved this same problem through a suite of secondary documents.
 
-It might seem impossible to support extensibility and interoperability simultaneously, but as the authors on {{-RFC9518}} and Martin Fowler in {{BoundedContexts}} points out, the key to succeeding is ensuring the layering is correct.
+It might seem impossible to support extensibility and interoperability simultaneously, but as the authors on {{RFC9518}} and Martin Fowler in {{BoundedContexts}} points out, the key to succeeding is ensuring the layering is correct.
 
 # Strategy & Tactics
 
@@ -307,9 +309,9 @@ Type systems such as the Hindley–Milner type system, can provide much stronger
 
 ## Structured Suffixes
 
-{{-RFC7071}} defined a JSON based media type for expressing reputation, `application/reputon+json`.
+{{RFC7071}} defined a JSON based media type for expressing reputation, `application/reputon+json`.
 
-The `+json` part is a structured suffix as described in {{-RFC6839}}.
+The `+json` part is a structured suffix as described in {{RFC6839}}.
 
 Defining a new media type with a structured suffix, allows for systems that support content type negotiation to respond with more precise content types.
 
