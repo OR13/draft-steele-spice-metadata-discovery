@@ -35,11 +35,13 @@ normative:
 informative:
   I-D.draft-ietf-ace-key-groupcomm: ACE-KEY-GROUPCOMM
   I-D.draft-ietf-oauth-sd-jwt-vc: SD-JWT-VC
+  I-D.draft-steele-spice-oblivious-credential-state: SPICE-OCS
   BoundedContexts:
     title: Bounded Context
     target: https://martinfowler.com/bliki/BoundedContext.html
   RFC8949: CBOR
   RFC8259: JSON
+  RFC9458: OHTTP
   RFC9518:
   RFC7071:
   RFC6839:
@@ -242,29 +244,22 @@ In order to enable consumers leverage their prefered identifiers and content typ
 
 It might seem impossible to support extensibility and interoperability simultaneously, but as the authors on {{RFC9518}} and Martin Fowler in {{BoundedContexts}} points out, the key to succeeding is ensuring the layering is correct.
 
-# Strategy & Tactics
-
-Editors note: This whole section is far too ranty... the objective is to provide generic guidance to address the problem, before providing concrete recommendations and a single set of mandatory to implement APIs.
-
-Be honest about the hierarchical model.
-
-Digital identity solutions always assume supremacy of certain building blocks.
-
-Open ID Connect assumes HTTP, JSON and JWT.
-
-DIDs and VCs assume URNs and JSON-LD.
-
-CBOR is frequently assumed for new work, due to its similarity to JSON and superior storage and transmission costs.
-
-It is better to build a very useful, and easy to implement specification that solves a problem, than it is to build a hard to use, and hard to implement specification that seeks inclusivity at the cost of efficiency, interoperability and simplicity.
-
-Once the essential components, and their relative priorities (read importance or rank) are established, assemble them such that each might be replaced in the future, for example HTTP might be replaced with some other transport, JSON with CBOR, JWT with CWT, etc.
-
-It is ok, if replacing a single component, requires replacing a set of connected sub components, for example moving from JSON to CBOR, might also require moving from JWT to CWT.
-
-While it might seem valuable to support multiple formats, it is one of the highest cost decisions a standard can fail to make for implementers, and it should be avoided at all costs.
-
 # Structured Identifiers
+
+Structured identifiers, such as URLs are helpful for naming unique identities, but can introduce security and privacy issues while attempting to reduce implementation burden or improve user experience.
+
+A common pattern is to have a single service provider, operating a domain `identity.provider.example`, deploy unqiue URLs for each identity under its domain, for example `https://identity.provider.example/handle`.
+
+Traffic analysis of `https://identity.provider.example` can reveal a distribution of interest in an identity by region and over time.
+
+Additionally, the service provider might serve unique key material for this identifier based on the timing and regional information.
+
+{{-OHTTP}} can address some of these privacy concerns, see {{-SPICE-OCS}} for more details.
+
+Another solution can be to rely on decentralized and distributed systems such as DHTs or Blockchains, so that the latest keys and metadata regarding and identifier can be resolved without the interest in that specific identifer to a specific service provider.
+
+Both of these appraoches bring with them signifcant deployment challenges, which may have already been committed to, depending on the identity layer used in a protocol.
+
 
 ## Compound Identifiers
 
@@ -355,7 +350,7 @@ Content-Type: \
 {
   "keys": [
     {
-      "kid": "urn:ietf:params:oauth:jwk-thumbprint:sha-256:NzbLsXh8...sRGC9Xs"
+      "kid": "urn:ietf:params:oauth:jwk-thumbprint:sha-256:Nz2...sXs"
       "kty": "EC",
       "crv": "P-256",
       "alg": "ES256",
@@ -455,7 +450,7 @@ This allows for negotiation of different content types satisfying the same purpo
 
 Purpose is more than just "which algorithms", it is also the intended use of the algorithm.
 
-For example, a key migth be used to sign assertions to create credentials, or challenges to enable authentication.
+For example, a key might be used to sign assertions to create credentials, or challenges to enable authentication.
 
 
 # Security Considerations
