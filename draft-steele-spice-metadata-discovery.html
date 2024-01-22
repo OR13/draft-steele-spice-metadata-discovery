@@ -13,14 +13,14 @@
        After presentation, verifiers need to discover any new key material or status changes related to credentials. 
        This document enables issuers, holders and verifiers to discover supported protocols and formats for keys, claims, credentials and proofs. 
     " name="description">
-<meta content="xml2rfc 3.19.0" name="generator">
+<meta content="xml2rfc 3.19.1" name="generator">
 <meta content="credential" name="keyword">
 <meta content="presentation" name="keyword">
 <meta content="identity" name="keyword">
 <meta content="metadata" name="keyword">
 <meta content="draft-steele-spice-metadata-discovery-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.19.0
+  xml2rfc 3.19.1
     Python 3.11.6
     ConfigArgParse 1.7
     google-i18n-address 3.1.0
@@ -33,7 +33,7 @@
     requests 2.31.0
     setuptools 68.2.2
     six 1.16.0
-    wcwidth 0.2.12
+    wcwidth 0.2.13
 -->
 <link href="draft-steele-spice-metadata-discovery.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -1036,7 +1036,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Steele</td>
-<td class="center">Expires 10 July 2024</td>
+<td class="center">Expires 25 July 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1049,12 +1049,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-steele-spice-metadata-discovery-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-01-07" class="published">7 January 2024</time>
+<time datetime="2024-01-22" class="published">22 January 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-07-10">10 July 2024</time></dd>
+<dd class="expires"><time datetime="2024-07-25">25 July 2024</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1108,7 +1108,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 10 July 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 25 July 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1152,58 +1152,55 @@ svg :is([fill="white"], [fill^="#fff"]) {
             </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
-            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-strategy-tactics" class="internal xref">Strategy &amp; Tactics</a></p>
+            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-structured-identifiers" class="internal xref">Structured Identifiers</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.1">
+                <p id="section-toc.1-1.4.2.1.1"><a href="#section-4.1" class="auto internal xref">4.1</a>.  <a href="#name-compound-identifiers" class="internal xref">Compound Identifiers</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.2">
+                <p id="section-toc.1-1.4.2.2.1"><a href="#section-4.2" class="auto internal xref">4.2</a>.  <a href="#name-global-uniqueness" class="internal xref">Global Uniqueness</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.3">
+                <p id="section-toc.1-1.4.2.3.1"><a href="#section-4.3" class="auto internal xref">4.3</a>.  <a href="#name-sharing-structured-identifi" class="internal xref">Sharing Structured Identifiers</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
-            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-structured-identifiers" class="internal xref">Structured Identifiers</a></p>
+            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-content-types" class="internal xref">Content Types</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.1">
-                <p id="section-toc.1-1.5.2.1.1"><a href="#section-5.1" class="auto internal xref">5.1</a>.  <a href="#name-compound-identifiers" class="internal xref">Compound Identifiers</a></p>
+                <p id="section-toc.1-1.5.2.1.1"><a href="#section-5.1" class="auto internal xref">5.1</a>.  <a href="#name-structured-suffixes" class="internal xref">Structured Suffixes</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.2">
-                <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="auto internal xref">5.2</a>.  <a href="#name-global-uniqueness" class="internal xref">Global Uniqueness</a></p>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.3">
-                <p id="section-toc.1-1.5.2.3.1"><a href="#section-5.3" class="auto internal xref">5.3</a>.  <a href="#name-sharing-structured-identifi" class="internal xref">Sharing Structured Identifiers</a></p>
+                <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="auto internal xref">5.2</a>.  <a href="#name-allowing-additional-propert" class="internal xref">Allowing Additional Properties</a></p>
 </li>
             </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
-            <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-content-types" class="internal xref">Content Types</a></p>
-<ul class="compact toc ulBare ulEmpty">
-<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1">
-                <p id="section-toc.1-1.6.2.1.1"><a href="#section-6.1" class="auto internal xref">6.1</a>.  <a href="#name-structured-suffixes" class="internal xref">Structured Suffixes</a></p>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2">
-                <p id="section-toc.1-1.6.2.2.1"><a href="#section-6.2" class="auto internal xref">6.2</a>.  <a href="#name-allowing-additional-propert" class="internal xref">Allowing Additional Properties</a></p>
-</li>
-            </ul>
+            <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-spice-metadata-discovery" class="internal xref">SPICE Metadata Discovery</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
-            <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-spice-metadata-discovery" class="internal xref">SPICE Metadata Discovery</a></p>
+            <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8">
-            <p id="section-toc.1-1.8.1"><a href="#section-8" class="auto internal xref">8</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
+            <p id="section-toc.1-1.8.1"><a href="#section-8" class="auto internal xref">8</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.9">
-            <p id="section-toc.1-1.9.1"><a href="#section-9" class="auto internal xref">9</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
-</li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10">
-            <p id="section-toc.1-1.10.1"><a href="#section-10" class="auto internal xref">10</a>. <a href="#name-references" class="internal xref">References</a></p>
+            <p id="section-toc.1-1.9.1"><a href="#section-9" class="auto internal xref">9</a>.  <a href="#name-references" class="internal xref">References</a></p>
 <ul class="compact toc ulBare ulEmpty">
-<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10.2.1">
-                <p id="section-toc.1-1.10.2.1.1"><a href="#section-10.1" class="auto internal xref">10.1</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.9.2.1">
+                <p id="section-toc.1-1.9.2.1.1"><a href="#section-9.1" class="auto internal xref">9.1</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
 </li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10.2.2">
-                <p id="section-toc.1-1.10.2.2.1"><a href="#section-10.2" class="auto internal xref">10.2</a>.  <a href="#name-informative-references" class="internal xref">Informative References</a></p>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.9.2.2">
+                <p id="section-toc.1-1.9.2.2.1"><a href="#section-9.2" class="auto internal xref">9.2</a>.  <a href="#name-informative-references" class="internal xref">Informative References</a></p>
 </li>
             </ul>
 </li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11">
-            <p id="section-toc.1-1.11.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10">
+            <p id="section-toc.1-1.10.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
 </li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.12">
-            <p id="section-toc.1-1.12.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-address" class="internal xref">Author's Address</a></p>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11">
+            <p id="section-toc.1-1.11.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-address" class="internal xref">Author's Address</a></p>
 </li>
         </ul>
 </nav>
@@ -1373,96 +1370,86 @@ Payload (in CBOR diagnostic notation,
 </div>
 </section>
 </div>
-<div id="strategy-tactics">
-<section id="section-4">
-      <h2 id="name-strategy-tactics">
-<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-strategy-tactics" class="section-name selfRef">Strategy &amp; Tactics</a>
-      </h2>
-<p id="section-4-1">Editors note: This whole section is far too ranty... the objective is to provide generic guidance to address the problem, before providing concrete recommendations and a single set of mandatory to implement APIs.<a href="#section-4-1" class="pilcrow">¶</a></p>
-<p id="section-4-2">Be honest about the hierarchical model.<a href="#section-4-2" class="pilcrow">¶</a></p>
-<p id="section-4-3">Digital identity solutions always assume supremacy of certain building blocks.<a href="#section-4-3" class="pilcrow">¶</a></p>
-<p id="section-4-4">Open ID Connect assumes HTTP, JSON and JWT.<a href="#section-4-4" class="pilcrow">¶</a></p>
-<p id="section-4-5">DIDs and VCs assume URNs and JSON-LD.<a href="#section-4-5" class="pilcrow">¶</a></p>
-<p id="section-4-6">CBOR is frequently assumed for new work, due to its similarity to JSON and superior storage and transmission costs.<a href="#section-4-6" class="pilcrow">¶</a></p>
-<p id="section-4-7">It is better to build a very useful, and easy to implement specification that solves a problem, than it is to build a hard to use, and hard to implement specification that seeks inclusivity at the cost of efficiency, interoperability and simplicity.<a href="#section-4-7" class="pilcrow">¶</a></p>
-<p id="section-4-8">Once the essential components, and their relative priorities (read importance or rank) are established, assemble them such that each might be replaced in the future, for example HTTP might be replaced with some other transport, JSON with CBOR, JWT with CWT, etc.<a href="#section-4-8" class="pilcrow">¶</a></p>
-<p id="section-4-9">It is ok, if replacing a single component, requires replacing a set of connected sub components, for example moving from JSON to CBOR, might also require moving from JWT to CWT.<a href="#section-4-9" class="pilcrow">¶</a></p>
-<p id="section-4-10">While it might seem valuable to support multiple formats, it is one of the highest cost decisions a standard can fail to make for implementers, and it should be avoided at all costs.<a href="#section-4-10" class="pilcrow">¶</a></p>
-</section>
-</div>
 <div id="structured-identifiers">
-<section id="section-5">
+<section id="section-4">
       <h2 id="name-structured-identifiers">
-<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-structured-identifiers" class="section-name selfRef">Structured Identifiers</a>
+<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-structured-identifiers" class="section-name selfRef">Structured Identifiers</a>
       </h2>
+<p id="section-4-1">Structured identifiers, such as URLs are helpful for naming unique identities, but can introduce security and privacy issues while attempting to reduce implementation burden or improve user experience.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-4-2">A common pattern is to have a single service provider, operating a domain <code>identity.provider.example</code>, deploy unqiue URLs for each identity under its domain, for example <code>https://identity.provider.example/handle</code>.<a href="#section-4-2" class="pilcrow">¶</a></p>
+<p id="section-4-3">Traffic analysis of <code>https://identity.provider.example</code> can reveal a distribution of interest in an identity by region and over time.<a href="#section-4-3" class="pilcrow">¶</a></p>
+<p id="section-4-4">Additionally, the service provider might serve unique key material for this identifier based on the timing and regional information.<a href="#section-4-4" class="pilcrow">¶</a></p>
+<p id="section-4-5"><span>[<a href="#RFC9458" class="cite xref">RFC9458</a>]</span> can address some of these privacy concerns, see <span>[<a href="#I-D.draft-steele-spice-oblivious-credential-state" class="cite xref">I-D.draft-steele-spice-oblivious-credential-state</a>]</span> for more details.<a href="#section-4-5" class="pilcrow">¶</a></p>
+<p id="section-4-6">Another solution can be to rely on decentralized and distributed systems such as DHTs or Blockchains, so that the latest keys and metadata regarding and identifier can be resolved without the interest in that specific identifer to a specific service provider.<a href="#section-4-6" class="pilcrow">¶</a></p>
+<p id="section-4-7">Both of these appraoches bring with them signifcant deployment challenges, which may have already been committed to, depending on the identity layer used in a protocol.<a href="#section-4-7" class="pilcrow">¶</a></p>
 <div id="compound-identifiers">
-<section id="section-5.1">
+<section id="section-4.1">
         <h3 id="name-compound-identifiers">
-<a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-compound-identifiers" class="section-name selfRef">Compound Identifiers</a>
+<a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-compound-identifiers" class="section-name selfRef">Compound Identifiers</a>
         </h3>
-<p id="section-5.1-1">Compound identifiers are commonly used to address the challend of expressing relations between distinct identifiers.<a href="#section-5.1-1" class="pilcrow">¶</a></p>
-<p id="section-5.1-2">In URLS for http resources, depending on the content type, the compount identifier <code>https://issuer.example/capabilities#f81d4fae-7dec-11d0-a765-00a0c91e6bf6</code> might express that "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" is a sub resource of "https://issuer.example/capabilities" which is a sub resource of "https://issuer.example".<a href="#section-5.1-2" class="pilcrow">¶</a></p>
-<p id="section-5.1-3">When constructing compoind identifiers, it is important to consider how negotiation is impacted by leveraging different parts of a structured identifier.<a href="#section-5.1-3" class="pilcrow">¶</a></p>
-<p id="section-5.1-4">For example, a server can assist with negotiation for response types for <code>https://issuer.example/capabilities</code>, but sub resources identified by a fragment have their response type controlled by their parent resource.<a href="#section-5.1-4" class="pilcrow">¶</a></p>
+<p id="section-4.1-1">Compound identifiers are commonly used to address the challend of expressing relations between distinct identifiers.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
+<p id="section-4.1-2">In URLS for http resources, depending on the content type, the compount identifier <code>https://issuer.example/capabilities#f81d4fae-7dec-11d0-a765-00a0c91e6bf6</code> might express that "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" is a sub resource of "https://issuer.example/capabilities" which is a sub resource of "https://issuer.example".<a href="#section-4.1-2" class="pilcrow">¶</a></p>
+<p id="section-4.1-3">When constructing compoind identifiers, it is important to consider how negotiation is impacted by leveraging different parts of a structured identifier.<a href="#section-4.1-3" class="pilcrow">¶</a></p>
+<p id="section-4.1-4">For example, a server can assist with negotiation for response types for <code>https://issuer.example/capabilities</code>, but sub resources identified by a fragment have their response type controlled by their parent resource.<a href="#section-4.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="global-uniqueness">
-<section id="section-5.2">
+<section id="section-4.2">
         <h3 id="name-global-uniqueness">
-<a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-global-uniqueness" class="section-name selfRef">Global Uniqueness</a>
+<a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-global-uniqueness" class="section-name selfRef">Global Uniqueness</a>
         </h3>
-<p id="section-5.2-1">Global uniqueness is a deseriable property of structed identifiers.<a href="#section-5.2-1" class="pilcrow">¶</a></p>
-<p id="section-5.2-2">Ensuring global uniquess often tends towards centralization or federation, because some system or entity must ensure that distinct identities are not able to contest, or claim a single unique identifier.<a href="#section-5.2-2" class="pilcrow">¶</a></p>
-<p id="section-5.2-3">One way to achieve global uniqueness is to produce a compound identifier where the authority or structure of the identifier establishes the uniquenss through relation to itself.<a href="#section-5.2-3" class="pilcrow">¶</a></p>
-<p id="section-5.2-4">For example <code>https://issuer.example/f81d4fae-7dec-11d0-a765-00a0c91e6bf6</code> relies on the authority <code>https://issuer.example</code> to maintain the linkage between resource identifier and resource representations.<a href="#section-5.2-4" class="pilcrow">¶</a></p>
-<p id="section-5.2-5">Another example <code>https://issuer.example/urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6</code> uses a URN namespace to establish a globally unique identifier <code>urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6</code> and then uses <code>https://issuer.example</code> to establish a compound identifier which is globally unique.<a href="#section-5.2-5" class="pilcrow">¶</a></p>
+<p id="section-4.2-1">Global uniqueness is a deseriable property of structed identifiers.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
+<p id="section-4.2-2">Ensuring global uniquess often tends towards centralization or federation, because some system or entity must ensure that distinct identities are not able to contest, or claim a single unique identifier.<a href="#section-4.2-2" class="pilcrow">¶</a></p>
+<p id="section-4.2-3">One way to achieve global uniqueness is to produce a compound identifier where the authority or structure of the identifier establishes the uniquenss through relation to itself.<a href="#section-4.2-3" class="pilcrow">¶</a></p>
+<p id="section-4.2-4">For example <code>https://issuer.example/f81d4fae-7dec-11d0-a765-00a0c91e6bf6</code> relies on the authority <code>https://issuer.example</code> to maintain the linkage between resource identifier and resource representations.<a href="#section-4.2-4" class="pilcrow">¶</a></p>
+<p id="section-4.2-5">Another example <code>https://issuer.example/urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6</code> uses a URN namespace to establish a globally unique identifier <code>urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6</code> and then uses <code>https://issuer.example</code> to establish a compound identifier which is globally unique.<a href="#section-4.2-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sharing-structured-identifiers">
-<section id="section-5.3">
+<section id="section-4.3">
         <h3 id="name-sharing-structured-identifi">
-<a href="#section-5.3" class="section-number selfRef">5.3. </a><a href="#name-sharing-structured-identifi" class="section-name selfRef">Sharing Structured Identifiers</a>
+<a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-sharing-structured-identifi" class="section-name selfRef">Sharing Structured Identifiers</a>
         </h3>
-<p id="section-5.3-1">Some systems might wish to share structured identifiers, while maintaining authority for representations.<a href="#section-5.3-1" class="pilcrow">¶</a></p>
-<p id="section-5.3-2">For example <code>https://issuer.example/urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6</code> and <code>https://verifier.example/urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6</code> might both use <code>urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6</code> to express a globally unique identifier for an attribute key or attribute value.<a href="#section-5.3-2" class="pilcrow">¶</a></p>
-<p id="section-5.3-3">When independent entities share globally unique identifiers, they are responsible for ensuring that the identifier is used consistently.<a href="#section-5.3-3" class="pilcrow">¶</a></p>
-<p id="section-5.3-4">For example:<a href="#section-5.3-4" class="pilcrow">¶</a></p>
-<p id="section-5.3-5"><code>https://resolver1.example/identifiers/did:example:123</code> could serve completely different JSON-LD for <code>did:example:123</code> than <code>https://resolver2.example/identifiers/did:example:123</code>.<a href="#section-5.3-5" class="pilcrow">¶</a></p>
-<p id="section-5.3-6">Because unlike URLs, URNs are not resolvable by themselves, trust in resources represented with URNs comes from the system you are communicating with, and unlike URLs, there is no commonly understood scheme for communiation, such as http encoded in the identifier.<a href="#section-5.3-6" class="pilcrow">¶</a></p>
+<p id="section-4.3-1">Some systems might wish to share structured identifiers, while maintaining authority for representations.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
+<p id="section-4.3-2">For example <code>https://issuer.example/urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6</code> and <code>https://verifier.example/urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6</code> might both use <code>urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6</code> to express a globally unique identifier for an attribute key or attribute value.<a href="#section-4.3-2" class="pilcrow">¶</a></p>
+<p id="section-4.3-3">When independent entities share globally unique identifiers, they are responsible for ensuring that the identifier is used consistently.<a href="#section-4.3-3" class="pilcrow">¶</a></p>
+<p id="section-4.3-4">For example:<a href="#section-4.3-4" class="pilcrow">¶</a></p>
+<p id="section-4.3-5"><code>https://resolver1.example/identifiers/did:example:123</code> could serve completely different JSON-LD for <code>did:example:123</code> than <code>https://resolver2.example/identifiers/did:example:123</code>.<a href="#section-4.3-5" class="pilcrow">¶</a></p>
+<p id="section-4.3-6">Because unlike URLs, URNs are not resolvable by themselves, trust in resources represented with URNs comes from the system you are communicating with, and unlike URLs, there is no commonly understood scheme for communiation, such as http encoded in the identifier.<a href="#section-4.3-6" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
 </div>
 <div id="content-types">
-<section id="section-6">
+<section id="section-5">
       <h2 id="name-content-types">
-<a href="#section-6" class="section-number selfRef">6. </a><a href="#name-content-types" class="section-name selfRef">Content Types</a>
+<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-content-types" class="section-name selfRef">Content Types</a>
       </h2>
-<p id="section-6-1">Type systems such as the Hindley–Milner type system, can provide much stronger security properties than well defined content types, but both serve a similar purpose, which is to express the intended processing and capabilies of data structures.<a href="#section-6-1" class="pilcrow">¶</a></p>
+<p id="section-5-1">Type systems such as the Hindley–Milner type system, can provide much stronger security properties than well defined content types, but both serve a similar purpose, which is to express the intended processing and capabilies of data structures.<a href="#section-5-1" class="pilcrow">¶</a></p>
 <div id="structured-suffixes">
-<section id="section-6.1">
+<section id="section-5.1">
         <h3 id="name-structured-suffixes">
-<a href="#section-6.1" class="section-number selfRef">6.1. </a><a href="#name-structured-suffixes" class="section-name selfRef">Structured Suffixes</a>
+<a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-structured-suffixes" class="section-name selfRef">Structured Suffixes</a>
         </h3>
-<p id="section-6.1-1"><span>[<a href="#RFC7071" class="cite xref">RFC7071</a>]</span> defined a JSON based media type for expressing reputation, <code>application/reputon+json</code>.<a href="#section-6.1-1" class="pilcrow">¶</a></p>
-<p id="section-6.1-2">The <code>+json</code> part is a structured suffix as described in <span>[<a href="#RFC6839" class="cite xref">RFC6839</a>]</span>.<a href="#section-6.1-2" class="pilcrow">¶</a></p>
-<p id="section-6.1-3">Defining a new media type with a structured suffix, allows for systems that support content type negotiation to respond with more precise content types.<a href="#section-6.1-3" class="pilcrow">¶</a></p>
-<p id="section-6.1-4">This property of responding with less ambigious content types is part of secure system design, and <span>[<a href="#RFC8725" class="cite xref">RFC8725</a>]</span> notes that using more specific types can help protect against certain attacks.<a href="#section-6.1-4" class="pilcrow">¶</a></p>
-<p id="section-6.1-5">Using a more specific content type comes at the cost of being "generally understood", for example <code>application/json</code> is often expected or hard coded in software, and returning <code>application/reputon+json</code> could cause software to fail higher up in the application stack.<a href="#section-6.1-5" class="pilcrow">¶</a></p>
+<p id="section-5.1-1"><span>[<a href="#RFC7071" class="cite xref">RFC7071</a>]</span> defined a JSON based media type for expressing reputation, <code>application/reputon+json</code>.<a href="#section-5.1-1" class="pilcrow">¶</a></p>
+<p id="section-5.1-2">The <code>+json</code> part is a structured suffix as described in <span>[<a href="#RFC6839" class="cite xref">RFC6839</a>]</span>.<a href="#section-5.1-2" class="pilcrow">¶</a></p>
+<p id="section-5.1-3">Defining a new media type with a structured suffix, allows for systems that support content type negotiation to respond with more precise content types.<a href="#section-5.1-3" class="pilcrow">¶</a></p>
+<p id="section-5.1-4">This property of responding with less ambigious content types is part of secure system design, and <span>[<a href="#RFC8725" class="cite xref">RFC8725</a>]</span> notes that using more specific types can help protect against certain attacks.<a href="#section-5.1-4" class="pilcrow">¶</a></p>
+<p id="section-5.1-5">Using a more specific content type comes at the cost of being "generally understood", for example <code>application/json</code> is often expected or hard coded in software, and returning <code>application/reputon+json</code> could cause software to fail higher up in the application stack.<a href="#section-5.1-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="allowing-additional-properties">
-<section id="section-6.2">
+<section id="section-5.2">
         <h3 id="name-allowing-additional-propert">
-<a href="#section-6.2" class="section-number selfRef">6.2. </a><a href="#name-allowing-additional-propert" class="section-name selfRef">Allowing Additional Properties</a>
+<a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-allowing-additional-propert" class="section-name selfRef">Allowing Additional Properties</a>
         </h3>
-<p id="section-6.2-1">It is common for content types to rely on map or object datastructures for their top level serializations.<a href="#section-6.2-1" class="pilcrow">¶</a></p>
-<p id="section-6.2-2">This is because a MAP is easily extended with new key value pairs, which when not understood can be ignored, whereas a string or array, might cause processing errors if extended.<a href="#section-6.2-2" class="pilcrow">¶</a></p>
-<p id="section-6.2-3"><code>application/jwk-set+json</code> builds on <code>application/json</code> and expresses a set of cryptographic keys represented by values, that are consistent with <code>application/jwk+json</code>.<a href="#section-6.2-3" class="pilcrow">¶</a></p>
-<p id="section-6.2-4">In cases where additional properties can be present, implementations should take advantage of this and avoid creating new media types, until the number of new properties is substantial enough to justify ensuring security and processing considerations specific to the new type cause faults.<a href="#section-6.2-4" class="pilcrow">¶</a></p>
-<p id="section-6.2-5">For example, consider the following URL and resource expressing "keys that are use to make attribute assertions about a subject".<a href="#section-6.2-5" class="pilcrow">¶</a></p>
-<p id="section-6.2-6">Request:<a href="#section-6.2-6" class="pilcrow">¶</a></p>
-<div class="lang-http-message sourcecode" id="section-6.2-7">
+<p id="section-5.2-1">It is common for content types to rely on map or object datastructures for their top level serializations.<a href="#section-5.2-1" class="pilcrow">¶</a></p>
+<p id="section-5.2-2">This is because a MAP is easily extended with new key value pairs, which when not understood can be ignored, whereas a string or array, might cause processing errors if extended.<a href="#section-5.2-2" class="pilcrow">¶</a></p>
+<p id="section-5.2-3"><code>application/jwk-set+json</code> builds on <code>application/json</code> and expresses a set of cryptographic keys represented by values, that are consistent with <code>application/jwk+json</code>.<a href="#section-5.2-3" class="pilcrow">¶</a></p>
+<p id="section-5.2-4">In cases where additional properties can be present, implementations should take advantage of this and avoid creating new media types, until the number of new properties is substantial enough to justify ensuring security and processing considerations specific to the new type cause faults.<a href="#section-5.2-4" class="pilcrow">¶</a></p>
+<p id="section-5.2-5">For example, consider the following URL and resource expressing "keys that are use to make attribute assertions about a subject".<a href="#section-5.2-5" class="pilcrow">¶</a></p>
+<p id="section-5.2-6">Request:<a href="#section-5.2-6" class="pilcrow">¶</a></p>
+<div class="lang-http-message sourcecode" id="section-5.2-7">
 <pre>
 NOTE: '\' line wrapping per RFC 8792
 
@@ -1470,10 +1457,10 @@ GET /keys/assertion HTTP/1.1
 Host: issuer.example
 Accept: \
   application/jwk-set+json
-</pre><a href="#section-6.2-7" class="pilcrow">¶</a>
+</pre><a href="#section-5.2-7" class="pilcrow">¶</a>
 </div>
-<p id="section-6.2-8">Response:<a href="#section-6.2-8" class="pilcrow">¶</a></p>
-<div class="lang-http-message sourcecode" id="section-6.2-9">
+<p id="section-5.2-8">Response:<a href="#section-5.2-8" class="pilcrow">¶</a></p>
+<div class="lang-http-message sourcecode" id="section-5.2-9">
 <pre>
 NOTE: '\' line wrapping per RFC 8792
 
@@ -1484,7 +1471,7 @@ Content-Type: \
 {
   "keys": [
     {
-      "kid": "urn:ietf:params:oauth:jwk-thumbprint:sha-256:NzbLsXh8...sRGC9Xs"
+      "kid": "urn:ietf:params:oauth:jwk-thumbprint:sha-256:Nz2...sXs"
       "kty": "EC",
       "crv": "P-256",
       "alg": "ES256",
@@ -1493,31 +1480,31 @@ Content-Type: \
     }
   ]
 }
-</pre><a href="#section-6.2-9" class="pilcrow">¶</a>
+</pre><a href="#section-5.2-9" class="pilcrow">¶</a>
 </div>
-<p id="section-6.2-10">The <code>keys</code> property is part of <code>application/jwk-set+json</code>, and additional properties can be added at this layer, without creating a new media type, however, those properties will not be well understood in the context of <code>application/jwk-set+json</code>.<a href="#section-6.2-10" class="pilcrow">¶</a></p>
-<p id="section-6.2-11">Similarly inside each key the <code>alg</code> property is optional, but when present it signals the algorithm the key is restricted to be used with.<a href="#section-6.2-11" class="pilcrow">¶</a></p>
-<p id="section-6.2-12">Additional properties might be added to the keys themselves, however, those properties will not be well understood in the context of <code>application/jwk+json</code>.<a href="#section-6.2-12" class="pilcrow">¶</a></p>
+<p id="section-5.2-10">The <code>keys</code> property is part of <code>application/jwk-set+json</code>, and additional properties can be added at this layer, without creating a new media type, however, those properties will not be well understood in the context of <code>application/jwk-set+json</code>.<a href="#section-5.2-10" class="pilcrow">¶</a></p>
+<p id="section-5.2-11">Similarly inside each key the <code>alg</code> property is optional, but when present it signals the algorithm the key is restricted to be used with.<a href="#section-5.2-11" class="pilcrow">¶</a></p>
+<p id="section-5.2-12">Additional properties might be added to the keys themselves, however, those properties will not be well understood in the context of <code>application/jwk+json</code>.<a href="#section-5.2-12" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
 </div>
 <div id="spice-metadata-discovery">
-<section id="section-7">
+<section id="section-6">
       <h2 id="name-spice-metadata-discovery">
-<a href="#section-7" class="section-number selfRef">7. </a><a href="#name-spice-metadata-discovery" class="section-name selfRef">SPICE Metadata Discovery</a>
+<a href="#section-6" class="section-number selfRef">6. </a><a href="#name-spice-metadata-discovery" class="section-name selfRef">SPICE Metadata Discovery</a>
       </h2>
-<p id="section-7-1">Identifiers for issuer, holders and verifiers <span class="bcp14">MUST</span> be URLs.<a href="#section-7-1" class="pilcrow">¶</a></p>
-<p id="section-7-2">For example:<a href="#section-7-2" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-7-3">
+<p id="section-6-1">Identifiers for issuer, holders and verifiers <span class="bcp14">MUST</span> be URLs.<a href="#section-6-1" class="pilcrow">¶</a></p>
+<p id="section-6-2">For example:<a href="#section-6-2" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-6-3">
 <pre>
 https://issuer.example
-</pre><a href="#section-7-3" class="pilcrow">¶</a>
+</pre><a href="#section-6-3" class="pilcrow">¶</a>
 </div>
-<p id="section-7-4">The scheme of the URL <span class="bcp14">MUST</span> support resolving content types.<a href="#section-7-4" class="pilcrow">¶</a></p>
-<p id="section-7-5">For example:<a href="#section-7-5" class="pilcrow">¶</a></p>
-<p id="section-7-6">Request:<a href="#section-7-6" class="pilcrow">¶</a></p>
-<div class="lang-http-message sourcecode" id="section-7-7">
+<p id="section-6-4">The scheme of the URL <span class="bcp14">MUST</span> support resolving content types.<a href="#section-6-4" class="pilcrow">¶</a></p>
+<p id="section-6-5">For example:<a href="#section-6-5" class="pilcrow">¶</a></p>
+<p id="section-6-6">Request:<a href="#section-6-6" class="pilcrow">¶</a></p>
+<div class="lang-http-message sourcecode" id="section-6-7">
 <pre>
 NOTE: '\' line wrapping per RFC 8792
 
@@ -1525,10 +1512,10 @@ GET / HTTP/1.1
 Host: issuer.example
 Accept: \
   application/json
-</pre><a href="#section-7-7" class="pilcrow">¶</a>
+</pre><a href="#section-6-7" class="pilcrow">¶</a>
 </div>
-<p id="section-7-8">Response:<a href="#section-7-8" class="pilcrow">¶</a></p>
-<div class="lang-http-message sourcecode" id="section-7-9">
+<p id="section-6-8">Response:<a href="#section-6-8" class="pilcrow">¶</a></p>
+<div class="lang-http-message sourcecode" id="section-6-9">
 <pre>
 NOTE: '\' line wrapping per RFC 8792
 
@@ -1540,12 +1527,12 @@ Content-Type: \
   "capabilities": "https://issuer.example/capabilities",
   ...
 }
-</pre><a href="#section-7-9" class="pilcrow">¶</a>
+</pre><a href="#section-6-9" class="pilcrow">¶</a>
 </div>
-<p id="section-7-10">Content type specific sub resources <span class="bcp14">MUST</span> be expressved by reference, and <span class="bcp14">MUST NOT</span> be expressed by value.<a href="#section-7-10" class="pilcrow">¶</a></p>
-<p id="section-7-11">For example:<a href="#section-7-11" class="pilcrow">¶</a></p>
-<p id="section-7-12">Request:<a href="#section-7-12" class="pilcrow">¶</a></p>
-<div class="lang-http-message sourcecode" id="section-7-13">
+<p id="section-6-10">Content type specific sub resources <span class="bcp14">MUST</span> be expressved by reference, and <span class="bcp14">MUST NOT</span> be expressed by value.<a href="#section-6-10" class="pilcrow">¶</a></p>
+<p id="section-6-11">For example:<a href="#section-6-11" class="pilcrow">¶</a></p>
+<p id="section-6-12">Request:<a href="#section-6-12" class="pilcrow">¶</a></p>
+<div class="lang-http-message sourcecode" id="section-6-13">
 <pre>
 NOTE: '\' line wrapping per RFC 8792
 
@@ -1553,10 +1540,10 @@ GET / HTTP/1.1
 Host: issuer.example
 Accept: \
   application/json
-</pre><a href="#section-7-13" class="pilcrow">¶</a>
+</pre><a href="#section-6-13" class="pilcrow">¶</a>
 </div>
-<p id="section-7-14">Response:<a href="#section-7-14" class="pilcrow">¶</a></p>
-<div class="lang-http-message sourcecode" id="section-7-15">
+<p id="section-6-14">Response:<a href="#section-6-14" class="pilcrow">¶</a></p>
+<div class="lang-http-message sourcecode" id="section-6-15">
 <pre>
 NOTE: '\' line wrapping per RFC 8792
 
@@ -1568,41 +1555,41 @@ Content-Type: \
   "jwks": "https://issuer.example/keys",
   ...
 }
-</pre><a href="#section-7-15" class="pilcrow">¶</a>
+</pre><a href="#section-6-15" class="pilcrow">¶</a>
 </div>
-<p id="section-7-16">It is <span class="bcp14">RECOMMENDED</span> to avoid registering new media types, except in cases where a response might be confused for an existing media type in a way that impacts security.<a href="#section-7-16" class="pilcrow">¶</a></p>
-<p id="section-7-17">It is <span class="bcp14">RECOMMENDED</span> to return content types that have message level integrity, to protect authenticity, and ensure transport agility is less impacted by transport specific security considerations.<a href="#section-7-17" class="pilcrow">¶</a></p>
-<p id="section-7-18">It is <span class="bcp14">RECOMMENDED</span> to submit content types that have messsage level encryption, to protect confidentiality, and ensure transport agility is less impacted by transport specific security considerations.<a href="#section-7-18" class="pilcrow">¶</a></p>
-<p id="section-7-19">It is <span class="bcp14">RECOMMENDED</span> that "purpose" be encoded in identifiers, not attributes of representations.<a href="#section-7-19" class="pilcrow">¶</a></p>
-<p id="section-7-20">This allows for negotiation of different content types satisfying the same purpose.<a href="#section-7-20" class="pilcrow">¶</a></p>
-<p id="section-7-21">Purpose is more than just "which algorithms", it is also the intended use of the algorithm.<a href="#section-7-21" class="pilcrow">¶</a></p>
-<p id="section-7-22">For example, a key migth be used to sign assertions to create credentials, or challenges to enable authentication.<a href="#section-7-22" class="pilcrow">¶</a></p>
+<p id="section-6-16">It is <span class="bcp14">RECOMMENDED</span> to avoid registering new media types, except in cases where a response might be confused for an existing media type in a way that impacts security.<a href="#section-6-16" class="pilcrow">¶</a></p>
+<p id="section-6-17">It is <span class="bcp14">RECOMMENDED</span> to return content types that have message level integrity, to protect authenticity, and ensure transport agility is less impacted by transport specific security considerations.<a href="#section-6-17" class="pilcrow">¶</a></p>
+<p id="section-6-18">It is <span class="bcp14">RECOMMENDED</span> to submit content types that have messsage level encryption, to protect confidentiality, and ensure transport agility is less impacted by transport specific security considerations.<a href="#section-6-18" class="pilcrow">¶</a></p>
+<p id="section-6-19">It is <span class="bcp14">RECOMMENDED</span> that "purpose" be encoded in identifiers, not attributes of representations.<a href="#section-6-19" class="pilcrow">¶</a></p>
+<p id="section-6-20">This allows for negotiation of different content types satisfying the same purpose.<a href="#section-6-20" class="pilcrow">¶</a></p>
+<p id="section-6-21">Purpose is more than just "which algorithms", it is also the intended use of the algorithm.<a href="#section-6-21" class="pilcrow">¶</a></p>
+<p id="section-6-22">For example, a key might be used to sign assertions to create credentials, or challenges to enable authentication.<a href="#section-6-22" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="security-considerations">
-<section id="section-8">
+<section id="section-7">
       <h2 id="name-security-considerations">
-<a href="#section-8" class="section-number selfRef">8. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
+<a href="#section-7" class="section-number selfRef">7. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<p id="section-8-1">TODO Security<a href="#section-8-1" class="pilcrow">¶</a></p>
+<p id="section-7-1">TODO Security<a href="#section-7-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana-considerations">
-<section id="section-9">
+<section id="section-8">
       <h2 id="name-iana-considerations">
-<a href="#section-9" class="section-number selfRef">9. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
+<a href="#section-8" class="section-number selfRef">8. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
       </h2>
-<p id="section-9-1">This document has no IANA actions.<a href="#section-9-1" class="pilcrow">¶</a></p>
+<p id="section-8-1">This document has no IANA actions.<a href="#section-8-1" class="pilcrow">¶</a></p>
 </section>
 </div>
-<section id="section-10">
+<section id="section-9">
       <h2 id="name-references">
-<a href="#section-10" class="section-number selfRef">10. </a><a href="#name-references" class="section-name selfRef">References</a>
+<a href="#section-9" class="section-number selfRef">9. </a><a href="#name-references" class="section-name selfRef">References</a>
       </h2>
 <div id="sec-normative-references">
-<section id="section-10.1">
+<section id="section-9.1">
         <h3 id="name-normative-references">
-<a href="#section-10.1" class="section-number selfRef">10.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+<a href="#section-9.1" class="section-number selfRef">9.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
         </h3>
 <dl class="references">
 <dt id="RFC2119">[RFC2119]</dt>
@@ -1617,9 +1604,9 @@ Content-Type: \
 </section>
 </div>
 <div id="sec-informative-references">
-<section id="section-10.2">
+<section id="section-9.2">
         <h3 id="name-informative-references">
-<a href="#section-10.2" class="section-number selfRef">10.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
+<a href="#section-9.2" class="section-number selfRef">9.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
         </h3>
 <dl class="references">
 <dt id="BoundedContexts">[BoundedContexts]</dt>
@@ -1636,11 +1623,15 @@ Content-Type: \
 <dd class="break"></dd>
 <dt id="I-D.draft-ietf-ace-key-groupcomm">[I-D.draft-ietf-ace-key-groupcomm]</dt>
         <dd>
-<span class="refAuthor">Palombini, F.</span> and <span class="refAuthor">M. Tiloca</span>, <span class="refTitle">"Key Provisioning for Group Communication using ACE"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-ace-key-groupcomm-17</span>, <time datetime="2023-10-06" class="refDate">6 October 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-ace-key-groupcomm-17">https://datatracker.ietf.org/doc/html/draft-ietf-ace-key-groupcomm-17</a>&gt;</span>. </dd>
+<span class="refAuthor">Palombini, F.</span> and <span class="refAuthor">M. Tiloca</span>, <span class="refTitle">"Key Provisioning for Group Communication using ACE"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-ace-key-groupcomm-18</span>, <time datetime="2024-01-16" class="refDate">16 January 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-ace-key-groupcomm-18">https://datatracker.ietf.org/doc/html/draft-ietf-ace-key-groupcomm-18</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.draft-ietf-oauth-sd-jwt-vc">[I-D.draft-ietf-oauth-sd-jwt-vc]</dt>
         <dd>
 <span class="refAuthor">Terbu, O.</span> and <span class="refAuthor">D. Fett</span>, <span class="refTitle">"SD-JWT-based Verifiable Credentials (SD-JWT VC)"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-oauth-sd-jwt-vc-01</span>, <time datetime="2023-10-23" class="refDate">23 October 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-oauth-sd-jwt-vc-01">https://datatracker.ietf.org/doc/html/draft-ietf-oauth-sd-jwt-vc-01</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.draft-steele-spice-oblivious-credential-state">[I-D.draft-steele-spice-oblivious-credential-state]</dt>
+        <dd>
+<span class="refAuthor">Steele, O.</span>, <span class="refTitle">"Oblivious Credential State"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-steele-spice-oblivious-credential-state-00</span>, <time datetime="2024-01-13" class="refDate">13 January 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-steele-spice-oblivious-credential-state-00">https://datatracker.ietf.org/doc/html/draft-steele-spice-oblivious-credential-state-00</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="JSON-LD">[JSON-LD]</dt>
         <dd>
@@ -1669,6 +1660,10 @@ Content-Type: \
 <dt id="RFC8949">[RFC8949]</dt>
         <dd>
 <span class="refAuthor">Bormann, C.</span> and <span class="refAuthor">P. Hoffman</span>, <span class="refTitle">"Concise Binary Object Representation (CBOR)"</span>, <span class="seriesInfo">STD 94</span>, <span class="seriesInfo">RFC 8949</span>, <span class="seriesInfo">DOI 10.17487/RFC8949</span>, <time datetime="2020-12" class="refDate">December 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8949">https://www.rfc-editor.org/rfc/rfc8949</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9458">[RFC9458]</dt>
+        <dd>
+<span class="refAuthor">Thomson, M.</span> and <span class="refAuthor">C. A. Wood</span>, <span class="refTitle">"Oblivious HTTP"</span>, <span class="seriesInfo">RFC 9458</span>, <span class="seriesInfo">DOI 10.17487/RFC9458</span>, <time datetime="2024-01" class="refDate">January 2024</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9458">https://www.rfc-editor.org/rfc/rfc9458</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9518">[RFC9518]</dt>
         <dd>

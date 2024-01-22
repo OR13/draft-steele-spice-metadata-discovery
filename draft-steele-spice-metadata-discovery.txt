@@ -4,8 +4,8 @@
 
 Secure Patterns for Internet CrEdentials                       O. Steele
 Internet-Draft                                                 Transmute
-Intended status: Informational                            7 January 2024
-Expires: 10 July 2024
+Intended status: Informational                           22 January 2024
+Expires: 25 July 2024
 
 
                         SPICE Metadata Discovery
@@ -64,7 +64,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 10 July 2024.
+   This Internet-Draft will expire on 25 July 2024.
 
 Copyright Notice
 
@@ -86,20 +86,19 @@ Table of Contents
    2.  Terminology
    3.  Background
      3.1.  The layering problem
-   4.  Strategy & Tactics
-   5.  Structured Identifiers
-     5.1.  Compound Identifiers
-     5.2.  Global Uniqueness
-     5.3.  Sharing Structured Identifiers
-   6.  Content Types
-     6.1.  Structured Suffixes
-     6.2.  Allowing Additional Properties
-   7.  SPICE Metadata Discovery
-   8.  Security Considerations
-   9.  IANA Considerations
-   10. References
-     10.1.  Normative References
-     10.2.  Informative References
+   4.  Structured Identifiers
+     4.1.  Compound Identifiers
+     4.2.  Global Uniqueness
+     4.3.  Sharing Structured Identifiers
+   5.  Content Types
+     5.1.  Structured Suffixes
+     5.2.  Allowing Additional Properties
+   6.  SPICE Metadata Discovery
+   7.  Security Considerations
+   8.  IANA Considerations
+   9.  References
+     9.1.  Normative References
+     9.2.  Informative References
    Acknowledgments
    Author's Address
 
@@ -326,46 +325,37 @@ Table of Contents
    Martin Fowler in [BoundedContexts] points out, the key to succeeding
    is ensuring the layering is correct.
 
-4.  Strategy & Tactics
+4.  Structured Identifiers
 
-   Editors note: This whole section is far too ranty... the objective is
-   to provide generic guidance to address the problem, before providing
-   concrete recommendations and a single set of mandatory to implement
-   APIs.
+   Structured identifiers, such as URLs are helpful for naming unique
+   identities, but can introduce security and privacy issues while
+   attempting to reduce implementation burden or improve user
+   experience.
 
-   Be honest about the hierarchical model.
+   A common pattern is to have a single service provider, operating a
+   domain identity.provider.example, deploy unqiue URLs for each
+   identity under its domain, for example
+   https://identity.provider.example/handle.
 
-   Digital identity solutions always assume supremacy of certain
-   building blocks.
+   Traffic analysis of https://identity.provider.example can reveal a
+   distribution of interest in an identity by region and over time.
 
-   Open ID Connect assumes HTTP, JSON and JWT.
+   Additionally, the service provider might serve unique key material
+   for this identifier based on the timing and regional information.
 
-   DIDs and VCs assume URNs and JSON-LD.
+   [RFC9458] can address some of these privacy concerns, see
+   [I-D.draft-steele-spice-oblivious-credential-state] for more details.
 
-   CBOR is frequently assumed for new work, due to its similarity to
-   JSON and superior storage and transmission costs.
+   Another solution can be to rely on decentralized and distributed
+   systems such as DHTs or Blockchains, so that the latest keys and
+   metadata regarding and identifier can be resolved without the
+   interest in that specific identifer to a specific service provider.
 
-   It is better to build a very useful, and easy to implement
-   specification that solves a problem, than it is to build a hard to
-   use, and hard to implement specification that seeks inclusivity at
-   the cost of efficiency, interoperability and simplicity.
+   Both of these appraoches bring with them signifcant deployment
+   challenges, which may have already been committed to, depending on
+   the identity layer used in a protocol.
 
-   Once the essential components, and their relative priorities (read
-   importance or rank) are established, assemble them such that each
-   might be replaced in the future, for example HTTP might be replaced
-   with some other transport, JSON with CBOR, JWT with CWT, etc.
-
-   It is ok, if replacing a single component, requires replacing a set
-   of connected sub components, for example moving from JSON to CBOR,
-   might also require moving from JWT to CWT.
-
-   While it might seem valuable to support multiple formats, it is one
-   of the highest cost decisions a standard can fail to make for
-   implementers, and it should be avoided at all costs.
-
-5.  Structured Identifiers
-
-5.1.  Compound Identifiers
+4.1.  Compound Identifiers
 
    Compound identifiers are commonly used to address the challend of
    expressing relations between distinct identifiers.
@@ -385,7 +375,7 @@ Table of Contents
    by a fragment have their response type controlled by their parent
    resource.
 
-5.2.  Global Uniqueness
+4.2.  Global Uniqueness
 
    Global uniqueness is a deseriable property of structed identifiers.
 
@@ -409,7 +399,7 @@ Table of Contents
    then uses https://issuer.example to establish a compound identifier
    which is globally unique.
 
-5.3.  Sharing Structured Identifiers
+4.3.  Sharing Structured Identifiers
 
    Some systems might wish to share structured identifiers, while
    maintaining authority for representations.
@@ -434,14 +424,14 @@ Table of Contents
    communicating with, and unlike URLs, there is no commonly understood
    scheme for communiation, such as http encoded in the identifier.
 
-6.  Content Types
+5.  Content Types
 
    Type systems such as the Hindley–Milner type system, can provide much
    stronger security properties than well defined content types, but
    both serve a similar purpose, which is to express the intended
    processing and capabilies of data structures.
 
-6.1.  Structured Suffixes
+5.1.  Structured Suffixes
 
    [RFC7071] defined a JSON based media type for expressing reputation,
    application/reputon+json.
@@ -462,7 +452,7 @@ Table of Contents
    reputon+json could cause software to fail higher up in the
    application stack.
 
-6.2.  Allowing Additional Properties
+5.2.  Allowing Additional Properties
 
    It is common for content types to rely on map or object
    datastructures for their top level serializations.
@@ -504,7 +494,7 @@ Table of Contents
    {
      "keys": [
        {
-         "kid": "urn:ietf:params:oauth:jwk-thumbprint:sha-256:NzbLsXh8...sRGC9Xs"
+         "kid": "urn:ietf:params:oauth:jwk-thumbprint:sha-256:Nz2...sXs"
          "kty": "EC",
          "crv": "P-256",
          "alg": "ES256",
@@ -527,7 +517,7 @@ Table of Contents
    those properties will not be well understood in the context of
    application/jwk+json.
 
-7.  SPICE Metadata Discovery
+6.  SPICE Metadata Discovery
 
    Identifiers for issuer, holders and verifiers MUST be URLs.
 
@@ -609,20 +599,20 @@ Table of Contents
    Purpose is more than just "which algorithms", it is also the intended
    use of the algorithm.
 
-   For example, a key migth be used to sign assertions to create
+   For example, a key might be used to sign assertions to create
    credentials, or challenges to enable authentication.
 
-8.  Security Considerations
+7.  Security Considerations
 
    TODO Security
 
-9.  IANA Considerations
+8.  IANA Considerations
 
    This document has no IANA actions.
 
-10.  References
+9.  References
 
-10.1.  Normative References
+9.1.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -633,7 +623,7 @@ Table of Contents
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
-10.2.  Informative References
+9.2.  Informative References
 
    [BoundedContexts]
               "Bounded Context", n.d.,
@@ -648,9 +638,9 @@ Table of Contents
    [I-D.draft-ietf-ace-key-groupcomm]
               Palombini, F. and M. Tiloca, "Key Provisioning for Group
               Communication using ACE", Work in Progress, Internet-
-              Draft, draft-ietf-ace-key-groupcomm-17, 6 October 2023,
+              Draft, draft-ietf-ace-key-groupcomm-18, 16 January 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ace-key-
-              groupcomm-17>.
+              groupcomm-18>.
 
    [I-D.draft-ietf-oauth-sd-jwt-vc]
               Terbu, O. and D. Fett, "SD-JWT-based Verifiable
@@ -658,6 +648,13 @@ Table of Contents
               Draft, draft-ietf-oauth-sd-jwt-vc-01, 23 October 2023,
               <https://datatracker.ietf.org/doc/html/draft-ietf-oauth-
               sd-jwt-vc-01>.
+
+   [I-D.draft-steele-spice-oblivious-credential-state]
+              Steele, O., "Oblivious Credential State", Work in
+              Progress, Internet-Draft, draft-steele-spice-oblivious-
+              credential-state-00, 13 January 2024,
+              <https://datatracker.ietf.org/doc/html/draft-steele-spice-
+              oblivious-credential-state-00>.
 
    [JSON-LD]  "A JSON-based Serialization for Linked Data", n.d.,
               <https://www.w3.org/TR/json-ld11/>.
@@ -689,6 +686,10 @@ Table of Contents
               Representation (CBOR)", STD 94, RFC 8949,
               DOI 10.17487/RFC8949, December 2020,
               <https://www.rfc-editor.org/rfc/rfc8949>.
+
+   [RFC9458]  Thomson, M. and C. A. Wood, "Oblivious HTTP", RFC 9458,
+              DOI 10.17487/RFC9458, January 2024,
+              <https://www.rfc-editor.org/rfc/rfc9458>.
 
    [RFC9518]  Nottingham, M., "Centralization, Decentralization, and
               Internet Standards", RFC 9518, DOI 10.17487/RFC9518,
